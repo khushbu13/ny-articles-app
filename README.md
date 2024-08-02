@@ -23,6 +23,10 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 
+### `yarn eslint`
+
+Run eslint on the code
+
 ### `npx cypress open`
 
 Used to run E2E Cypress tests on local \
