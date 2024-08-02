@@ -18,14 +18,14 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 
-### Steps to run E2E Cypress tests on local
+### `npx cypress open`
 
-Ensure application is running using yarn start
-Run `npx cypress open`
-Select E2E Testing in chrome
-Select spec.cy.js
+Used to run E2E Cypress tests on local \
+Ensure application is running using yarn start \
+Run `npx cypress open` \
+Select E2E Testing in chrome \
+Select spec.cy.js \
 
-### Steps to run SonarQube on local
+### `yarn sonar`
 
-1. Run SonarQube using sonar.sh on local
-### Run `yarn sonar`
+1. Before this step - Run SonarQube using sonar.sh on local
