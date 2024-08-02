@@ -13,7 +13,7 @@ const ArticlesList = () => {
                 alignItems="center"
                 justifyContent="center"
             >
-                <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+                <List sx={{ width: '100%', bgcolor: 'background.paper' }} data-testid="article-list">
                     {data?.results?.map((article) => (
                         <ArticlesListItem article={article} key={article.id} />
                     ))}

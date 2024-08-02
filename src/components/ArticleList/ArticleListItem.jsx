@@ -6,7 +6,7 @@ import { useLinkClickHandler } from "react-router-dom";
 const ArticlesListItem = ({ article: { id, title, abstract } }) => {
     const onClick = useLinkClickHandler(`/article/${id}`)
     return <>
-        <ListItem sx={{ cursor: "pointer" }} onClick={onClick} alignItems="flex-start">
+        <ListItem data-testid="article-item" sx={{ cursor: "pointer" }} onClick={onClick} alignItems="flex-start">
             <ListItemText
                 primary={title}
                 secondary={abstract}
