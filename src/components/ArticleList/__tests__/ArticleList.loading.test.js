@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import ArticlesList from '../../components/ArticleList/ArticlesList';
+import ArticlesList from '../../ArticleList/ArticlesList';
 
-jest.mock("../../services/articles", () => ({
+jest.mock("../../../services/articles", () => ({
     useGetArticlesQuery: () => ({
         isLoading: true
     })
