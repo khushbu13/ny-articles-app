@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, List } from "@mui/material";
-import ArticlesListItem from "./ArticleListItem";
-import { useGetArticlesQuery } from "../../services/articles";
+import ArticlesListItem from "./ArticleListItem.tsx";
+import { useGetArticlesQuery } from "../../services/articles.ts";
 
 const ArticlesList = () => {
     const { data, error, isLoading } = useGetArticlesQuery()

@@ -8,9 +8,9 @@ import {
   RouterProvider,
   Navigate
 } from "react-router-dom";
-import ArticlesList from './components/ArticleList/ArticlesList';
+import ArticlesList from './components/ArticleList/ArticlesList.tsx';
+import ArticleDetail from './components/ArticleDetail/ArticleDetail.tsx';
 import { store } from './store';
-import ArticleDetail from './components/ArticleDetail/ArticleDetail';
 
 const router = createBrowserRouter([
   {
