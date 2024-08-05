@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals.js';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 import ArticlesList from './components/ArticleList/ArticlesList.tsx';
 import ArticleDetail from './components/ArticleDetail/ArticleDetail.tsx';
-import { store } from './store';
+import { store } from './store.js';
 
 const router = createBrowserRouter([
   {

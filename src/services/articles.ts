@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { APP_KEY, BASE_URL } from "../constants";
+import { APP_KEY, BASE_URL } from "../constants.ts";
 import { ArticlesListResponse } from "./article.type";
 
 export const articlesApi = createApi({
