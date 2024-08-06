@@ -5,7 +5,7 @@ This project is created as an assessment exercise to demonstrate the listing and
 ## Description
 
 The application is a responsive application showing list of popular articles as fetched by external api using set parameters.\
-Once you click on any item to view full article it opens the article in another tab.
+Once you click on any item it shows detail page for that article and from there you can view full article using link in another tab
 
 ## Available Scripts
 
@@ -46,10 +46,12 @@ Select spec.cy.js
 3. React Testing Library
 4. Cypress
 5. eslint
+6. React Router
 
 ### Structure of App
 
 1. The ArticleList component lists all popular articles filtered by days selected in period filter.
 2. The ArticleListItem component represents each item in the grid
+3. Clicking on any list item will take user to corresponding Article detail page with back button to come back to list. 
 3. Changing the filter reloads the list for the selected filter
 4. Clicking on link for any article in list opens article in new tab

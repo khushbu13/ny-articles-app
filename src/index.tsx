@@ -9,6 +9,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import ArticlesList from "./components/ArticleList/ArticlesList.tsx";
+import ArticleDetail from "./components/ArticleDetail/ArticleDetail.tsx";
 import { store } from "./store.js";
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "articles",
     element: <ArticlesList />,
+  },
+  {
+    path: "article/:articleId",
+    element: <ArticleDetail />,
   },
 ]);
 

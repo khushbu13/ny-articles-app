@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   AppBar,
   Box,
@@ -9,13 +9,15 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import { useSelector, useDispatch } from "react-redux";
 import ArticlesListItem from "./ArticleListItem.tsx";
+import { setDays } from "../../redux/slices/daysSlice.ts";
 import { useGetArticlesQuery } from "../../services/articles.ts";
 
 const ArticlesList = () => {
-  const [days, setDays] = useState("1");
+  const days = useSelector((state: any) => state.days.days);
+  const dispatch = useDispatch();
   const { data, error, isLoading } = useGetArticlesQuery(Number(days));
-  console.log(days);
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -34,7 +36,9 @@ const ArticlesList = () => {
             Select the time period
           </InputLabel>
           <NativeSelect
-            onChange={(event) => setDays(event?.target?.value)}
+            onChange={(event) =>
+              dispatch(setDays(Number(event?.target?.value)))
+            }
             defaultValue={days}
             inputProps={{
               name: "days",
@@ -51,7 +55,12 @@ const ArticlesList = () => {
         {isLoading && <div data-testid="loading">Loading...</div>}
         {error && <div data-testid="error">Some error occurred</div>}
         {data?.results && (
-          <Grid container minHeight={"400px"} data-testid="article-list" key={"grid-container"}>
+          <Grid
+            container
+            minHeight={"400px"}
+            data-testid="article-list"
+            key={"grid-container"}
+          >
             {data?.results?.map((article) => (
               <Grid
                 item
