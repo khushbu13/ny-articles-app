@@ -21,7 +21,7 @@ const ArticlesList = () => {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h6" sx={{ flexGrow: 1 }}>
               NY Times most popular articles
             </Typography>
           </Toolbar>
@@ -47,19 +47,18 @@ const ArticlesList = () => {
           </NativeSelect>
         </FormControl>
       </Typography>
-      <Grid container spacing={2} marginTop={5}>
+      <Box marginTop={5}>
         {isLoading && <div data-testid="loading">Loading...</div>}
         {error && <div data-testid="error">Some error occurred</div>}
         {data?.results && (
-          <Grid container minHeight={"400px"} data-testid="article-list">
+          <Grid container minHeight={"400px"} data-testid="article-list" key={"grid-container"}>
             {data?.results?.map((article) => (
               <Grid
                 item
-                key={article.id}
+                key={`grid${article.id}`}
                 xs={12}
                 md={6}
                 lg={4}
-                spacing={2}
                 padding={1}
                 minHeight={"400px"}
               >
@@ -68,7 +67,7 @@ const ArticlesList = () => {
             ))}
           </Grid>
         )}
-      </Grid>
+      </Box>
     </>
   );
 };
