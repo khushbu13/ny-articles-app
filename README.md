@@ -4,7 +4,7 @@ This project is created as an assessment exercise to demonstrate the listing and
 
 ## Description
 
-The application shows list of popular articles as fetched by external api using set parameters.\
+The application is a responsive application showing list of popular articles as fetched by external api using set parameters.\
 Once you click on any item to view full article it opens the article in another tab.
 
 ## Available Scripts

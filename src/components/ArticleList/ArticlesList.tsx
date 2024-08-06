@@ -57,6 +57,7 @@ const ArticlesList = () => {
                 item
                 key={article.id}
                 xs={12}
+                md={6}
                 lg={4}
                 spacing={2}
                 padding={1}
