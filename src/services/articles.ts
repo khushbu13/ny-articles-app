@@ -6,8 +6,8 @@ export const articlesApi = createApi({
   reducerPath: "articlesApi",
   baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
   endpoints: (builder) => ({
-    getArticles: builder.query<ArticlesListResponse, void>({
-      query: () => `viewed/7.json?api-key=${APP_KEY}`,
+    getArticles: builder.query<ArticlesListResponse, number>({
+      query: (days) => `viewed/${days}.json?api-key=${APP_KEY}`,
     }),
   }),
 });

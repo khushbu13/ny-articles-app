@@ -9,4 +9,6 @@ export interface ArticleType {
   url: string;
   section: string;
   byline: string;
+  published_date: string;
+  media: Array<string>;
 }

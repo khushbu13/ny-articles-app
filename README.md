@@ -5,7 +5,7 @@ This project is created as an assessment exercise to demonstrate the listing and
 ## Description
 
 The application shows list of popular articles as fetched by external api using set parameters.\
-Once you click on any item, it opens the detail page for that article showing some details for the article and a link to view the article in another tab.
+Once you click on any item to view full article it opens the article in another tab.
 
 ## Available Scripts
 
@@ -38,3 +38,18 @@ Select spec.cy.js
 ### `yarn sonar`
 
 1. Before this step - Run SonarQube using sonar.sh on local
+
+### Libraries Used in The project
+
+1. Material UI - For layout and icons
+2. Redux Toolkit
+3. React Testing Library
+4. Cypress
+5. eslint
+
+### Structure of App
+
+1. The ArticleList component lists all popular articles filtered by days selected in period filter.
+2. The ArticleListItem component represents each item in the grid
+3. Changing the filter reloads the list for the selected filter
+4. Clicking on link for any article in list opens article in new tab
